@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crimson Bites | Late-Night Coffee Lounge & Artisan Patisserie | Bengaluru, India</title>
+  <meta name="description" content="Experience Crimson Bites on Lavelle Road, Bengaluru. Artisanal single-origin brews from Chikmagalur, ruby mirror glaze pastries, and gourmet small plates in an intimate midnight velvet lounge.">
+  <meta name="keywords" content="Crimson Bites, Bengaluru cafe, Lavelle Road coffee, late night cafe Bangalore, Church street cafe, artisanal coffee Karnataka, patisserie Bengaluru">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Crimson Bites | Late-Night Coffee Lounge & Patisserie • Bengaluru">
+  <meta property="og:description" content="Where midnight brews meet velvet delights on Lavelle Road, Bengaluru. Open until 1:30 AM.">
+  <meta property="og:image" content="images/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       SITE HEADER / NAVBAR
+       ========================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-logo" id="brand-logo-link" aria-label="Crimson Bites Home">
+        <svg class="logo-icon-svg" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="48" fill="#14070a" stroke="#F8E0A4" stroke-width="2"/>
+          <circle cx="50" cy="50" r="38" fill="#A82020"/>
+          <path d="M50 25 C64 25 73 35 73 49 C73 63 61 74 47 74 C34 74 27 63 27 50 C27 37 37 25 50 25 Z" fill="none" stroke="#F8E0A4" stroke-width="3"/>
+          <path d="M42 36 Q50 48 40 60" fill="none" stroke="#31AAA9" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M52 34 Q60 48 50 62" fill="none" stroke="#F8E0A4" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="58" cy="38" r="3.5" fill="#31AAA9"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">Crimson Bites</span>
+          <span class="brand-tagline">Bengaluru • Lavelle Rd</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links" id="main-nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#spotlight" class="nav-link">Signatures</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#location" class="nav-link">Bengaluru Lounge</a></li>
+          <li><a href="#story" class="nav-link">Our Vibe</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Live IST Cafe Status Pill -->
+        <div class="live-status-pill" id="live-status-pill" aria-live="polite">
+          <span class="status-pulse-dot"></span>
+          <span>Open Tonight • Till 1:30 AM</span>
+        </div>
+
+        <!-- Order Tray Trigger -->
+        <button class="tray-trigger-btn" id="tray-trigger-btn" aria-label="View selected table items">
+          <span>☕ Tray</span>
+          <span class="tray-badge-count" id="tray-count-badge">0</span>
+        </button>
+
+        <!-- Reserve CTA Button -->
+        <button class="btn-reserve-nav" data-open-modal="reservation" id="nav-reserve-btn">
+          <span>Book Table</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-main-heading">
+      <div class="hero-backdrop-glow"></div>
+      <div class="hero-backdrop-glow-teal"></div>
+
+      <div class="container hero-grid">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-accent-bar"></span>
+            <span>Bengaluru’s Premier Late-Night Coffee & Patisserie</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-main-heading">
+            Where Midnight Brews Meet <span class="title-crimson">Velvet</span> <span class="title-accent">Delights</span>
+          </h1>
+
+          <p class="hero-description">
+            Nestled on Lavelle Road in the heart of Bengaluru. Discover hand-poured Chikmagalur single-origins, exquisite ruby mirror glaze entremets, and slow evening conversations amidst plush crimson booths.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn-primary" id="hero-explore-menu-btn">
+              <span>Explore The Menu</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <button class="btn-secondary" data-open-modal="reservation" id="hero-reserve-btn">
+              <span>Reserve a Table</span>
+            </button>
+
+            <a href="#location" class="btn-outline-cream" id="hero-location-btn">
+              <span>Find Us on Lavelle Rd</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics / Credibility -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Karnataka Single-Origin</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">1:30 AM</span>
+              <span class="metric-label">Late-Night Hours</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">4.9 ★</span>
+              <span class="metric-label">Over 1,200+ Guest Reviews</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual-frame">
+          <div class="hero-image-card">
+            <img src="images/hero.jpg" alt="Interior of Crimson Bites cafe lounge in Bengaluru with warm amber glow, plush crimson seating, and espresso bar" class="hero-image" width="700" height="437" loading="eager">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="hero-time-badge">
+            <span class="food-type-icon veg"></span>
+            <span class="time-badge-text">Lavelle Road • Central Bengaluru</span>
+          </div>
+
+          <div class="hero-floating-badge">
+            <div class="badge-icon-box">☕</div>
+            <div>
+              <div class="badge-text-title">Night Roastery & Bar</div>
+              <div class="badge-text-sub">Chikmagalur • Coorg • Wayanad</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         AMBIENT MOOD STRIP
+         ========================================== -->
+    <section class="mood-strip" aria-label="Cafe Attributes">
+      <div class="container">
+        <div class="mood-grid">
+          <div class="mood-card">
+            <span class="mood-icon">☕️</span>
+            <div>
+              <div class="mood-text-title">Single-Estate Pour-Overs</div>
+              <div class="mood-text-desc">Roasted in the hills of Karnataka</div>
+            </div>
+          </div>
+
+          <div class="mood-card">
+            <span class="mood-icon">🍰</span>
+            <div>
+              <div class="mood-text-title">Midnight Patisserie</div>
+              <div class="mood-text-desc">Freshly baked entremets & tarts</div>
+            </div>
+          </div>
+
+          <div class="mood-card">
+            <span class="mood-icon">✨</span>
+            <div>
+              <div class="mood-text-title">Plush Velvet Lounging</div>
+              <div class="mood-text-desc">Intimate booths & warm candlelight</div>
+            </div>
+          </div>
+
+          <div class="mood-card">
+            <span class="mood-icon">🌙</span>
+            <div>
+              <div class="mood-text-title">Open Till 1:30 AM</div>
+              <div class="mood-text-desc">Bengaluru’s favorite after-hours retreat</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SIGNATURES SPOTLIGHT SECTION
+         ========================================== -->
+    <section class="section-padding" id="spotlight" aria-labelledby="spotlight-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Curated Culinary Highlights</span>
+          <h2 class="section-title" id="spotlight-heading">The Crimson Trilogy</h2>
+          <p class="section-desc">
+            Three iconic creations crafted by our baristas and pastry chefs to celebrate the marriage of dark roast aroma and velvety sweetness.
+          </p>
+        </div>
+
+        <div class="spotlight-grid">
+          <!-- Item 1: Dessert -->
+          <article class="spotlight-card" id="spotlight-dessert-card">
+            <div class="spotlight-image-wrap">
+              <img src="images/dessert.jpg" alt="Crimson Ruby Mirror Glaze Entremet with gold leaf flecks and raspberries" class="spotlight-image" width="400" height="300" loading="lazy">
+              <span class="spotlight-badge">Patisserie Icon</span>
+              <span class="spotlight-price">₹460</span>
+            </div>
+            <div class="spotlight-content">
+              <h3 class="spotlight-title">Crimson Ruby Mirror Entremet</h3>
+              <p class="spotlight-desc">
+                Silky raspberry mirror glaze enveloping Belgian dark chocolate mousse, almond joconde sponge, tart berry compote, and 24k gold leaf flecks.
+              </p>
+              <div class="spotlight-footer">
+                <span class="spotlight-origin">Handcrafted Daily • Vegetarian</span>
+                <button class="btn-add-tray" data-spotlight-add="dessert-1" aria-label="Add Crimson Ruby Mirror Entremet to tray">
+                  <span>+ Add to Tray</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Coffee -->
+          <article class="spotlight-card" id="spotlight-coffee-card">
+            <div class="spotlight-image-wrap">
+              <img src="images/coffee.jpg" alt="Artisan pour over coffee server and velvety espresso cup on dark marble cafe table" class="spotlight-image" width="400" height="300" loading="lazy">
+              <span class="spotlight-badge">Specialty Brew</span>
+              <span class="spotlight-price">₹320</span>
+            </div>
+            <div class="spotlight-content">
+              <h3 class="spotlight-title">Chikmagalur Reserve Pour-Over</h3>
+              <p class="spotlight-desc">
+                Single-estate shade-grown Arabica extracted manually over a crystal V60. Layered notes of dark plum, roasted hazelnut, and dark cocoa nibs.
+              </p>
+              <div class="spotlight-footer">
+                <span class="spotlight-origin">Baba Budangiri Estate • Karnataka</span>
+                <button class="btn-add-tray" data-spotlight-add="brew-1" aria-label="Add Chikmagalur Reserve Pour-Over to tray">
+                  <span>+ Add to Tray</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Savory -->
+          <article class="spotlight-card" id="spotlight-savory-card">
+            <div class="spotlight-image-wrap">
+              <img src="images/savory.jpg" alt="Gourmet sourdough tartine with burrata cheese, wild mushrooms and balsamic glaze" class="spotlight-image" width="400" height="300" loading="lazy">
+              <span class="spotlight-badge">Bistro Small Plate</span>
+              <span class="spotlight-price">₹480</span>
+            </div>
+            <div class="spotlight-content">
+              <h3 class="spotlight-title">Truffle Burrata & Wild Mushroom Brioche</h3>
+              <p class="spotlight-desc">
+                Toasted artisan brioche layered with molten Italian burrata, pan-seared shiitake mushrooms, white truffle essence, and aged balsamic glaze.
+              </p>
+              <div class="spotlight-footer">
+                <span class="spotlight-origin">Bistro Kitchen • Vegetarian</span>
+                <button class="btn-add-tray" data-spotlight-add="savory-1" aria-label="Add Truffle Burrata to tray">
+                  <span>+ Add to Tray</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         INTERACTIVE FILTERABLE MENU SECTION
+         ========================================== -->
+    <section class="section-padding menu-section" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Handcrafted For The Night</span>
+          <h2 class="section-title" id="menu-heading">The Midnight Menu</h2>
+          <p class="section-desc">
+            Explore our curated selection of artisanal coffee elixirs, Parisian-inspired pastries, and savory tapas. Filter by category or dietary preference.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="menu-controls">
+          <!-- Category Filter Tabs -->
+          <div class="category-tabs" role="tablist" aria-label="Menu categories">
+            <button class="tab-btn active" data-category="all" role="tab" aria-selected="true">All Offerings</button>
+            <button class="tab-btn" data-category="brews" role="tab" aria-selected="false">Late-Night Brews & Elixirs</button>
+            <button class="tab-btn" data-category="desserts" role="tab" aria-selected="false">Artisan Desserts</button>
+            <button class="tab-btn" data-category="smallplates" role="tab" aria-selected="false">Savory Small Plates</button>
+            <button class="tab-btn" data-category="signatures" role="tab" aria-selected="false">Crimson Pairings</button>
+          </div>
+
+          <!-- Dietary Preferences -->
+          <div class="dietary-filters" aria-label="Dietary preferences">
+            <span style="font-size: 0.8rem; color: var(--text-muted); margin-right: 0.2rem;">Preference:</span>
+            <button class="diet-btn active" data-diet="all">All</button>
+            <button class="diet-btn" data-diet="veg">
+              <span class="food-type-icon veg"></span>
+              <span>Vegetarian</span>
+            </button>
+            <button class="diet-btn" data-diet="vegan">
+              <span class="food-type-icon veg"></span>
+              <span>Vegan</span>
+            </button>
+            <button class="diet-btn" data-diet="nonveg">
+              <span class="food-type-icon non-veg"></span>
+              <span>Non-Veg</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Menu Grid Container -->
+        <div class="menu-grid" id="menu-items-grid" aria-live="polite">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         BENGALURU LOCATION & AMBIANCE SECTION
+         ========================================== -->
+    <section class="section-padding location-section" id="location" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Central Bengaluru Destination</span>
+          <h2 class="section-title" id="location-heading">Visit Us on Lavelle Road</h2>
+          <p class="section-desc">
+            A quiet sanctuary just seconds away from the electric energy of Church Street, MG Road, and UB City.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <!-- Information Card -->
+          <div class="location-info-card">
+            <div class="location-badge-area">
+              <span class="locality-chip">Lavelle Road Precinct</span>
+              <span class="locality-chip" style="border-color: rgba(248, 224, 164, 0.4); color: var(--cream);">Bengaluru 560001</span>
+            </div>
+
+            <h3 class="address-headline">42/1 Lavelle Road, Shanthala Nagar, Ashok Nagar, Bengaluru</h3>
+            <p class="address-details">
+              Conveniently situated right off UB City boulevard, near the Church Street entrance. Perfect for post-work unwind sessions, late-night dates, and espresso enthusiasts.
+            </p>
+
+            <ul class="location-features-list">
+              <li class="location-feature-item">
+                <div class="feature-icon-box">🕒</div>
+                <div>
+                  <div class="feature-title">Hours of Operation</div>
+                  <div class="feature-desc">Monday – Sunday: 11:00 AM – 1:30 AM (Kitchen closes at 1:00 AM)</div>
+                </div>
+              </li>
+
+              <li class="location-feature-item">
+                <div class="feature-icon-box">🚇</div>
+                <div>
+                  <div class="feature-title">Metro Connectivity</div>
+                  <div class="feature-desc">4 minutes walk from Cubbon Park Metro & MG Road Metro (Purple Line)</div>
+                </div>
+              </li>
+
+              <li class="location-feature-item">
+                <div class="feature-icon-box">🚗</div>
+                <div>
+                  <div class="feature-title">Valet Parking Available</div>
+                  <div class="feature-desc">Complimentary valet service for all cafe and lounge guests on Lavelle Road</div>
+                </div>
+              </li>
+
+              <li class="location-feature-item">
+                <div class="feature-icon-box">📞</div>
+                <div>
+                  <div class="feature-title">Table Inquiries & Private Gatherings</div>
+                  <div class="feature-desc">+91 80 4920 8820 • reservations@crimsonbites.in</div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="location-actions">
+              <a href="https://maps.google.com/?q=Lavelle+Road+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn-directions" id="btn-get-directions">
+                <span>Open in Google Maps</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+
+              <button class="btn-copy-address" id="btn-copy-address" aria-label="Copy address to clipboard">
+                <span>📋 Copy Address</span>
+              </button>
+
+              <button class="btn-reserve-nav" data-open-modal="reservation" id="btn-location-reserve">
+                <span>Book Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Bengaluru Stylized Map Mockup -->
+          <div class="map-visual-card">
+            <!-- Simulated Map Canvas / Vector Diagram -->
+            <svg class="map-svg-mockup" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="mapBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#140609" />
+                  <stop offset="100%" stop-color="#090204" />
+                </linearGradient>
+                <pattern id="gridPattern" width="25" height="25" patternUnits="userSpaceOnUse">
+                  <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#F8E0A4" stroke-opacity="0.04" stroke-width="0.8"/>
+                </pattern>
+              </defs>
+
+              <!-- Map Background -->
+              <rect width="500" height="500" fill="url(#mapBgGrad)" />
+              <rect width="500" height="500" fill="url(#gridPattern)" />
+
+              <!-- Green lung: Cubbon Park area representation -->
+              <path d="M 50 20 C 120 15, 180 60, 160 140 C 140 220, 60 210, 40 160 Z" fill="#31AAA9" fill-opacity="0.12" stroke="#31AAA9" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="80" y="110" fill="#31AAA9" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" opacity="0.85">CUBBON PARK</text>
+
+              <!-- Major Arterial Roads of Bengaluru -->
+              <!-- MG Road -->
+              <path d="M 20 230 L 480 210" stroke="#F8E0A4" stroke-opacity="0.25" stroke-width="5" stroke-linecap="round"/>
+              <text x="320" y="200" fill="#F8E0A4" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" letter-spacing="1" opacity="0.6">M.G. ROAD</text>
+
+              <!-- Church Street -->
+              <path d="M 80 270 L 470 250" stroke="#F8E0A4" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round"/>
+              <text x="330" y="245" fill="#F8E0A4" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" letter-spacing="1" opacity="0.6">CHURCH STREET</text>
+
+              <!-- Kasturba Road -->
+              <path d="M 170 30 L 190 470" stroke="#F8E0A4" stroke-opacity="0.25" stroke-width="4.5"/>
+              <text x="140" y="440" fill="#F8E0A4" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" transform="rotate(-85 140 440)" opacity="0.6">KASTURBA ROAD</text>
+
+              <!-- Lavelle Road (Highlighted) -->
+              <path d="M 210 260 C 240 330, 270 380, 310 470" stroke="#A82020" stroke-opacity="0.8" stroke-width="6" stroke-linecap="round"/>
+              <path d="M 210 260 C 240 330, 270 380, 310 470" stroke="#F8E0A4" stroke-opacity="0.7" stroke-width="1" stroke-dasharray="5 3"/>
+              <text x="280" y="380" fill="#F8E0A4" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" letter-spacing="1">LAVELLE ROAD</text>
+
+              <!-- Landmark Hotspot: UB City -->
+              <g class="map-hotspot" data-info="UB City Luxury Mall • 2 mins away" style="cursor: pointer;">
+                <circle cx="215" cy="300" r="8" fill="#F8E0A4" fill-opacity="0.3" stroke="#F8E0A4" stroke-width="1.5"/>
+                <circle cx="215" cy="300" r="3.5" fill="#F8E0A4"/>
+                <text x="150" y="304" fill="#F8E0A4" font-size="10" font-weight="600" text-anchor="end">UB CITY</text>
+              </g>
+
+              <!-- Landmark Hotspot: MG Road Metro -->
+              <g class="map-hotspot" data-info="MG Road Metro Station (Purple Line) • 4 mins walk" style="cursor: pointer;">
+                <rect x="360" y="202" width="12" height="12" rx="3" fill="#31AAA9" fill-opacity="0.4" stroke="#31AAA9" stroke-width="1.5"/>
+                <text x="375" y="222" fill="#31AAA9" font-size="10" font-weight="600">METRO</text>
+              </g>
+
+              <!-- PRIMARY PIN: CRIMSON BITES -->
+              <g class="map-hotspot" data-info="Crimson Bites • 42/1 Lavelle Road • Open till 1:30 AM" style="cursor: pointer;">
+                <!-- Glowing pulses -->
+                <circle cx="255" cy="340" r="30" fill="#A82020" fill-opacity="0.2">
+                  <animate attributeName="r" values="16;38;16" dur="3s" repeatCount="indefinite" />
+                  <animate attributeName="fill-opacity" values="0.35;0.05;0.35" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="255" cy="340" r="16" fill="#6C1A1A" stroke="#F8E0A4" stroke-width="2"/>
+                <circle cx="255" cy="340" r="6" fill="#31AAA9"/>
+                
+                <!-- Callout label -->
+                <rect x="275" y="322" width="135" height="34" rx="8" fill="#14070a" stroke="#A82020" stroke-width="1.5" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.6))"/>
+                <text x="285" y="338" fill="#F8E0A4" font-size="11" font-weight="700" font-family="'Cinzel', serif">CRIMSON BITES</text>
+                <text x="285" y="350" fill="#31AAA9" font-size="8.5" font-weight="600">LATE NIGHT COFFEE & BITES</text>
+              </g>
+            </svg>
+
+            <!-- Map Overlay Banner -->
+            <div class="map-overlay-badge">
+              <span class="map-pin-pulse"></span>
+              <span class="map-overlay-text">Lavelle Road • Central Bengaluru Hub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         STORY & NIGHT VIBE SECTION
+         ========================================== -->
+    <section class="story-section" id="story" aria-labelledby="story-heading">
+      <div class="container story-grid">
+        <div class="story-content">
+          <span class="section-eyebrow">The Crimson Philosophy</span>
+          <h2 class="section-title" id="story-heading">Born in Bengaluru’s Gentle Night Air</h2>
+          <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.4rem;">
+            Bengaluru has forever been India’s coffee capital, but as midnight descends over the rain-scented canopies of Cubbon Park, the city yearned for a deeper, more romantic sanctuary.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8;">
+            At Crimson Bites, we celebrate that twilight hour. We pair freshly roasted beans sourced straight from sustainable estates in Chikmagalur and Coorg with intricate French patisserie and comforting small plates. It is a space designed for midnight readers, deep thinkers, and nocturnal lovers of fine food.
+          </p>
+        </div>
+
+        <div class="story-quote-box">
+          <div class="quote-mark">“</div>
+          <p class="story-quote">
+            Coffee should be as complex as a Bengaluru dusk, and dessert as unforgettable as a crimson moon.
+          </p>
+          <div class="quote-author">— The Crimson Bites Roastery & Kitchen, Lavelle Road</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="#hero" class="brand-logo" style="margin-bottom: 1.2rem;">
+            <svg class="logo-icon-svg" viewBox="0 0 100 100" style="width: 36px; height: 36px;">
+              <circle cx="50" cy="50" r="48" fill="#14070a" stroke="#F8E0A4" stroke-width="2"/>
+              <circle cx="50" cy="50" r="38" fill="#A82020"/>
+              <path d="M42 36 Q50 48 40 60" fill="none" stroke="#31AAA9" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M52 34 Q60 48 50 62" fill="none" stroke="#F8E0A4" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-name" style="font-size: 1.2rem;">Crimson Bites</span>
+          </a>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.2rem;">
+            Bengaluru’s premier late-night coffee lounge, artisan patisserie, and savory small plates bistro. Located in Central Bengaluru on Lavelle Road.
+          </p>
+          <div style="display:flex; gap: 0.8rem; font-size: 1.1rem; color: var(--cream);">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Crimson Bites Instagram" style="color:var(--teal);">📷</a>
+            <a href="https://google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Crimson Bites Maps" style="color:var(--cream);">📍</a>
+            <a href="mailto:hello@crimsonbites.in" aria-label="Crimson Bites Email" style="color:var(--cream);">✉️</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#spotlight" class="footer-link">Signature Creations</a></li>
+            <li><a href="#menu" class="footer-link">Full Late-Night Menu</a></li>
+            <li><a href="#location" class="footer-link">Lavelle Road Location</a></li>
+            <li><a href="#story" class="footer-link">The Bengaluru Story</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Hours & Contact -->
+        <div>
+          <h4 class="footer-col-title">Hours & Contact</h4>
+          <ul class="footer-links-list">
+            <li style="color: var(--text-secondary); font-size: 0.88rem;">Open Daily: 11:00 AM – 1:30 AM</li>
+            <li style="color: var(--text-muted); font-size: 0.84rem;">Late Kitchen: Till 1:00 AM</li>
+            <li style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 0.6rem;">Lavelle Road, Bengaluru 560001</li>
+            <li style="color: var(--teal); font-size: 0.88rem;">+91 80 4920 8820</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Midnight Circle Newsletter -->
+        <div>
+          <h4 class="footer-col-title">Midnight Circle</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6;">
+            Subscribe for invitations to secret late-night jazz sessions, single-origin cupping events, and seasonal dessert reveals in Bengaluru.
+          </p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Your email address" required>
+            <button type="submit" class="btn-newsletter">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Crimson Bites Bengaluru. All rights reserved.</p>
+        <p style="color: var(--text-muted);">Crafted with passion in Bengaluru, Karnataka, India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       TABLE RESERVATION MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="reservation-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title-heading">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title-heading">Reserve a Table</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close reservation modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.4rem;">
+          Join us at our Lavelle Road lounge. Walk-ins are welcomed, but weekend evening tables fill quickly.
+        </p>
+
+        <form id="reserve-table-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-name" class="form-label">Full Name</label>
+              <input type="text" id="res-name" class="form-input" placeholder="e.g. Ananya Sharma" required>
+            </div>
+            <div class="form-group">
+              <label for="res-phone" class="form-label">Phone / WhatsApp</label>
+              <input type="tel" id="res-phone" class="form-input" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date" class="form-label">Date</label>
+              <input type="date" id="res-date" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="res-time" class="form-label">Preferred Time Slot</label>
+              <select id="res-time" class="form-select" required>
+                <option value="12:00 PM">12:00 PM (Afternoon Brew)</option>
+                <option value="03:30 PM">03:30 PM (Afternoon Tea & Bakes)</option>
+                <option value="06:00 PM">06:00 PM (Sunset Hours)</option>
+                <option value="08:00 PM">08:00 PM (Dinner & Plates)</option>
+                <option value="10:00 PM" selected>10:00 PM (Midnight Coffee Lounge)</option>
+                <option value="11:30 PM">11:30 PM (Late-Night Desserts)</option>
+                <option value="12:30 AM">12:30 AM (Twilight Walk-in)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-guests" class="form-label">Number of Guests</label>
+              <select id="res-guests" class="form-select" required>
+                <option value="1">1 Guest (Solo Reading / Coffee)</option>
+                <option value="2" selected>2 Guests (Date / Catch-up)</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6+ Guests (Group Lounge)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="res-zone" class="form-label">Seating Preference</label>
+              <select id="res-zone" class="form-select">
+                <option value="Velvet Booth Lounge">Velvet Booth Lounge</option>
+                <option value="Espresso Bar Counter">Espresso Bar Counter</option>
+                <option value="Candlelit Alfresco Patio">Candlelit Alfresco Patio</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="res-notes" class="form-label">Special Requests (Optional)</label>
+            <textarea id="res-notes" class="form-textarea" rows="2" placeholder="Birthday celebration, dietary allergies, quiet reading corner..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-booking" id="btn-submit-booking">
+            Confirm Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       TABLE TRAY (ORDER DRAWER)
+       ========================================== -->
+  <div class="tray-drawer-overlay" id="tray-drawer-overlay" role="dialog" aria-modal="true" aria-labelledby="tray-title-heading">
+    <aside class="tray-drawer">
+      <div class="tray-header">
+        <h3 class="tray-title" id="tray-title-heading">Your Table Tray</h3>
+        <button class="modal-close-btn" id="tray-close-btn" aria-label="Close table tray">✕</button>
+      </div>
+
+      <div class="tray-items-list" id="tray-items-list">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <div class="tray-footer">
+        <div class="tray-subtotal-row">
+          <span class="tray-subtotal-label">Estimated Total (INR)</span>
+          <span class="tray-subtotal-val" id="tray-subtotal-val">₹0</span>
+        </div>
+        <button class="btn-primary" id="btn-tray-proceed" style="width: 100%; justify-content: center;">
+          <span>Book Table With This Selection</span>
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ==========================================
+       TOAST NOTIFICATION
+       ========================================== -->
+  <div class="toast-notice" id="toast-notice" role="status" aria-live="polite">
+    <span style="font-size: 1.1rem; color: var(--teal);">✦</span>
+    <span id="toast-message">Notification message</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
