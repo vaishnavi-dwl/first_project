@@ -1,6 +1,7 @@
 /**
  * CRIMSON BITES - Interactive Client Script
  * Bengaluru, India (Lavelle Road & Church Street)
+ * Color Palette: #D8A2A2, #FFDCDC, #FFF9D6, #8EA66B
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -255,16 +256,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. LIVE IST CAFE STATUS INDICATOR
   // ==========================================
   function updateLiveCafeStatus() {
-    // Bengaluru is UTC+5:30
     const now = new Date();
-    // Crimson Bites opens 11:00 AM to 1:30 AM every day
-    // Current local time
     const currentHour = now.getHours();
     const currentMinute = now.getMinutes();
     const currentDecimal = currentHour + currentMinute / 60;
 
     // Open from 11.0 (11:00 AM) until 25.5 (1:30 AM next day)
-    // In 24h format: 11:00 to 23:59 or 00:00 to 01:30
     const isOpen = currentDecimal >= 11.0 || currentDecimal <= 1.5;
 
     if (liveStatusPill) {
@@ -273,15 +270,15 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="status-pulse-dot"></span>
           <span>Open Tonight • Till 1:30 AM</span>
         `;
-        liveStatusPill.style.borderColor = 'rgba(49, 170, 169, 0.4)';
-        liveStatusPill.style.color = 'var(--teal)';
+        liveStatusPill.style.borderColor = '#8EA66B';
+        liveStatusPill.style.color = '#8EA66B';
       } else {
         liveStatusPill.innerHTML = `
-          <span class="status-pulse-dot" style="background:#f59e0b; box-shadow:0 0 10px #f59e0b;"></span>
+          <span class="status-pulse-dot" style="background:#D8A2A2; box-shadow:0 0 10px #D8A2A2;"></span>
           <span>Opens Today at 11:00 AM</span>
         `;
-        liveStatusPill.style.borderColor = 'rgba(245, 158, 11, 0.4)';
-        liveStatusPill.style.color = '#f59e0b';
+        liveStatusPill.style.borderColor = '#D8A2A2';
+        liveStatusPill.style.color = '#D8A2A2';
       }
     }
   }
@@ -294,7 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderMenu() {
     if (!menuContainer) return;
 
-    // Filter items
     const filtered = menuData.filter(item => {
       const matchCategory = currentCategory === 'all' || item.category === currentCategory;
       const matchDiet = currentDietFilter === 'all' || item.diet === currentDietFilter;
@@ -303,9 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (filtered.length === 0) {
       menuContainer.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
-          <p style="font-size: 1.2rem; color: var(--cream); margin-bottom: 0.5rem;">No items found matching your filter.</p>
-          <p style="font-size: 0.9rem;">Try selecting another category or dietary preference.</p>
+        <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: #8EA66B;">
+          <p style="font-size: 1.2rem; color: #8EA66B; margin-bottom: 0.5rem;">No items found matching your filter.</p>
+          <p style="font-size: 0.9rem; color: #8EA66B;">Try selecting another category or dietary preference.</p>
         </div>
       `;
       return;
@@ -341,7 +337,6 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }).join('');
 
-    // Attach click events to "+ Add" buttons
     menuContainer.querySelectorAll('[data-add-id]').forEach(btn => {
       btn.addEventListener('click', () => {
         const itemId = btn.getAttribute('data-add-id');
@@ -350,7 +345,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Category filter clicks
   categoryTabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       categoryTabBtns.forEach(b => b.classList.remove('active'));
@@ -360,7 +354,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Dietary filter clicks
   dietFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       dietFilterBtns.forEach(b => b.classList.remove('active'));
@@ -370,10 +363,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Initial render
   renderMenu();
 
-  // Attach Spotlight Add Buttons
   document.querySelectorAll('[data-spotlight-add]').forEach(btn => {
     btn.addEventListener('click', () => {
       const id = btn.getAttribute('data-spotlight-add');
@@ -420,9 +411,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (trayCart.size === 0) {
       trayItemsList.innerHTML = `
         <div class="tray-empty-state">
-          <div style="font-size: 2.5rem; margin-bottom: 0.8rem; opacity: 0.4;">☕️</div>
-          <p style="color: var(--cream); font-weight: 600; margin-bottom: 0.3rem;">Your Table Tray is empty</p>
-          <p style="font-size: 0.85rem;">Select brews, artisan bakes, or small plates from the menu to build your tasting order.</p>
+          <div style="font-size: 2.5rem; margin-bottom: 0.8rem; opacity: 0.7;">☕️</div>
+          <p style="color: #8EA66B; font-weight: 600; margin-bottom: 0.3rem;">Your Table Tray is empty</p>
+          <p style="font-size: 0.85rem; color: #8EA66B;">Select brews, artisan bakes, or small plates from the menu to build your tasting order.</p>
         </div>
       `;
     } else {
@@ -439,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="tray-item-controls">
             <button class="btn-qty" data-minus-id="${item.id}" aria-label="Decrease quantity">−</button>
-            <span style="font-weight: 700; min-width: 18px; text-align: center; color: var(--cream);">${quantity}</span>
+            <span style="font-weight: 700; min-width: 18px; text-align: center; color: #8EA66B;">${quantity}</span>
             <button class="btn-qty" data-plus-id="${item.id}" aria-label="Increase quantity">+</button>
           </div>
         `;
@@ -450,7 +441,6 @@ document.addEventListener('DOMContentLoaded', () => {
     traySubtotalVal.textContent = `₹${subtotal}`;
     trayCountBadge.textContent = totalItems;
 
-    // Attach minus & plus event listeners
     trayItemsList.querySelectorAll('[data-minus-id]').forEach(btn => {
       btn.addEventListener('click', () => {
         removeFromTray(btn.getAttribute('data-minus-id'));
@@ -464,7 +454,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Open/Close Tray
   if (trayTriggerBtn) {
     trayTriggerBtn.addEventListener('click', () => {
       trayDrawerOverlay.classList.add('active');
@@ -485,7 +474,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Proceed from tray to reservation
   if (btnProceedReserve) {
     btnProceedReserve.addEventListener('click', () => {
       trayDrawerOverlay.classList.remove('active');
@@ -500,7 +488,6 @@ document.addEventListener('DOMContentLoaded', () => {
     reservationModalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Set minimum date to today
     const dateInput = document.getElementById('res-date');
     if (dateInput) {
       const today = new Date().toISOString().split('T')[0];
@@ -532,7 +519,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Reservation Form Submission
   if (reserveForm) {
     reserveForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -544,40 +530,39 @@ document.addEventListener('DOMContentLoaded', () => {
       const guests = document.getElementById('res-guests').value;
       const zone = document.getElementById('res-zone').value;
 
-      // Generate random booking code
       const bookingCode = 'CB-BLR-' + Math.floor(1000 + Math.random() * 9000);
 
       const modalBody = document.querySelector('.modal-body');
       modalBody.innerHTML = `
         <div style="text-align: center; padding: 1.5rem 0.5rem;">
-          <div style="width: 68px; height: 68px; background: rgba(49, 170, 169, 0.2); border: 2px solid var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.4rem; color: var(--teal); font-size: 2rem;">
+          <div style="width: 68px; height: 68px; background: #FFDCDC; border: 2px solid #8EA66B; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.4rem; color: #8EA66B; font-size: 2rem;">
             ✓
           </div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--cream); margin-bottom: 0.6rem;">Reservation Confirmed!</h3>
-          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.6rem;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: #8EA66B; margin-bottom: 0.6rem;">Reservation Confirmed!</h3>
+          <p style="color: #8EA66B; font-size: 0.95rem; margin-bottom: 1.6rem;">
             Namaskara, <strong>${name}</strong>! Your table at Crimson Bites, Lavelle Road is reserved.
           </p>
           
-          <div style="background: rgba(14, 4, 7, 0.8); border: 1px dashed var(--cream-border); border-radius: var(--radius-md); padding: 1.2rem; text-align: left; margin-bottom: 1.8rem; font-size: 0.9rem;">
+          <div style="background: #FFDCDC; border: 1px dashed #D8A2A2; border-radius: 14px; padding: 1.2rem; text-align: left; margin-bottom: 1.8rem; font-size: 0.9rem;">
             <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
-              <span style="color: var(--text-muted);">Reference Code:</span>
-              <strong style="color: var(--teal);">${bookingCode}</strong>
+              <span style="color: #8EA66B;">Reference Code:</span>
+              <strong style="color: #8EA66B;">${bookingCode}</strong>
             </div>
             <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
-              <span style="color: var(--text-muted);">Date & Time:</span>
-              <span style="color: var(--cream);">${date} at ${time}</span>
+              <span style="color: #8EA66B;">Date & Time:</span>
+              <span style="color: #8EA66B;">${date} at ${time}</span>
             </div>
             <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
-              <span style="color: var(--text-muted);">Party Size:</span>
-              <span style="color: var(--cream);">${guests} Guests</span>
+              <span style="color: #8EA66B;">Party Size:</span>
+              <span style="color: #8EA66B;">${guests} Guests</span>
             </div>
             <div style="display:flex; justify-content:space-between;">
-              <span style="color: var(--text-muted);">Seating:</span>
-              <span style="color: var(--cream);">${zone}</span>
+              <span style="color: #8EA66B;">Seating:</span>
+              <span style="color: #8EA66B;">${zone}</span>
             </div>
           </div>
 
-          <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          <p style="font-size: 0.84rem; color: #8EA66B; margin-bottom: 1.5rem;">
             An SMS and WhatsApp confirmation will be sent to <strong>${phone}</strong>. Valet parking is available at the Lavelle Road entrance.
           </p>
 
@@ -590,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('btn-done-booking').addEventListener('click', () => {
         closeReservationModal();
         setTimeout(() => {
-          location.reload(); // reset modal state
+          location.reload();
         }, 300);
       });
     });
@@ -605,8 +590,8 @@ document.addEventListener('DOMContentLoaded', () => {
       navigator.clipboard.writeText(addressText).then(() => {
         const originalText = copyAddressBtn.innerHTML;
         copyAddressBtn.innerHTML = `<span>✓</span> <span>Copied!</span>`;
-        copyAddressBtn.style.borderColor = 'var(--teal)';
-        copyAddressBtn.style.color = 'var(--teal)';
+        copyAddressBtn.style.borderColor = '#8EA66B';
+        copyAddressBtn.style.color = '#8EA66B';
         
         showToast("📍 Address copied to clipboard! See you on Lavelle Road.");
 
@@ -668,15 +653,14 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinksList.style.top = '100%';
         navLinksList.style.left = '0';
         navLinksList.style.right = '0';
-        navLinksList.style.background = 'rgba(14, 4, 7, 0.98)';
+        navLinksList.style.background = '#FFF9D6';
         navLinksList.style.padding = '1.8rem 1.5rem';
-        navLinksList.style.borderBottom = '1px solid var(--border-subtle)';
+        navLinksList.style.borderBottom = '1px solid #D8A2A2';
         navLinksList.style.gap = '1.2rem';
         mobileToggle.innerHTML = '✕';
       }
     });
 
-    // Close when clicking a nav link on mobile
     navLinksList.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {

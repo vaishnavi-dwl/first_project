@@ -1,23 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#A82020" />
-      <stop offset="100%" stop-color="#6C1A1A" />
-    </linearGradient>
-    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#31AAA9" />
-      <stop offset="100%" stop-color="#1e7574" />
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D8A2A2" />
+      <stop offset="100%" stop-color="#8EA66B" />
     </linearGradient>
   </defs>
-  <rect width="100" height="100" rx="24" fill="#14070a"/>
-  <!-- Outer glowing ring -->
-  <circle cx="50" cy="50" r="42" fill="none" stroke="#F8E0A4" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="4 2"/>
-  <!-- Crimson inner disk -->
-  <circle cx="50" cy="50" r="36" fill="url(#crimsonGrad)"/>
-  <!-- Stylized Coffee Bean & Pastry / Crescent bite in Cream & Teal -->
-  <path d="M50 24 C64 24 74 34 74 48 C74 62 62 74 48 74 C34 74 26 64 26 50 C26 36 36 24 50 24 Z" fill="none" stroke="#F8E0A4" stroke-width="3"/>
-  <!-- Steam swirls / Crimson flourish -->
-  <path d="M42 36 Q50 48 40 60" fill="none" stroke="#31AAA9" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M52 34 Q60 48 50 62" fill="none" stroke="#F8E0A4" stroke-width="3.5" stroke-linecap="round"/>
-  <circle cx="58" cy="38" r="3.5" fill="#31AAA9"/>
+  <rect width="100" height="100" rx="24" fill="#FFF9D6"/>
+  <!-- Outer ring in D8A2A2 -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#D8A2A2" stroke-width="2" stroke-dasharray="4 2"/>
+  <!-- Inner disk in FFDCDC -->
+  <circle cx="50" cy="50" r="36" fill="#FFDCDC"/>
+  <!-- Stylized Coffee Bean / Cup in 8EA66B -->
+  <path d="M50 24 C64 24 74 34 74 48 C74 62 62 74 48 74 C34 74 26 64 26 50 C26 36 36 24 50 24 Z" fill="none" stroke="#8EA66B" stroke-width="3"/>
+  <!-- Steam swirls in 8EA66B & D8A2A2 -->
+  <path d="M42 36 Q50 48 40 60" fill="none" stroke="#8EA66B" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M52 34 Q60 48 50 62" fill="none" stroke="#D8A2A2" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="58" cy="38" r="3.5" fill="#8EA66B"/>
 </svg>
